@@ -90,19 +90,19 @@ while True:
                     elif s1 in ["2"]:
                         print("OK")
 
-                    elif opcion in ["5"]:
-                        print("Apple Pencil 2")
-                        SN = input("Numero de serie: ")
-                        coleccion.insert_one({'factura':factura, 'Product':'Apple Pencil Gen2','SerialNumber':SN})
-                        print('''
-                        1) Si
-                        2) no
-                        ''')
-                        s1 = input("Cambiar dispositivo?: ")
-                        if s1 in ["1"]:
-                            break
-                        elif s1 in ["2"]:
-                            print("OK")
+                elif opcion in ["5"]:
+                    print("Apple Pencil 2")
+                    SN = input("Numero de serie: ")
+                    coleccion.insert_one({'factura':factura, 'Product':'Apple Pencil Gen2','SerialNumber':SN})
+                    print('''
+                    1) Si
+                    2) no
+                    ''')
+                    s1 = input("Cambiar dispositivo?: ")
+                    if s1 in ["1"]:
+                        break
+                    elif s1 in ["2"]:
+                        print("OK")
 
                 elif opcion in ["6"]:
                     print("Apple Pencil 1")
