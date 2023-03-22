@@ -2,9 +2,9 @@ from pymongo import MongoClient
 
 client = MongoClient('localhost', 27017)
 
-db = client.t1_brandon
+db = client.facturas
 
-coleccion = db.Prueba
+coleccion = db.facturas20_21
 
 while True:
 
@@ -37,6 +37,9 @@ while True:
                 if opcion in ["1"]:
                     print("iPad 12")
                     SN = input("Numero de serie: ")
+                    if len(SN) < 4:
+                        print("Dato invalido")
+                        break
                     coleccion.insert_one({'factura':factura, 'Product':'iPad Pro 12.9','SerialNumber':SN})
                     print(''' Cambiar Dispositivo
                     1) Si
@@ -47,10 +50,16 @@ while True:
                         break
                     elif s1 in ["2"]:
                         print("OK")
+                    else:
+                        print("Dato invalido")
+                        break
 
                 elif opcion in ["2"]:
                     print("iPad 11")
                     SN = input("Numero de serie: ")
+                    if len(SN) < 4:
+                        print("Dato invalido")
+                        break
                     coleccion.insert_one({'factura':factura, 'Product':'iPad Pro 11','SerialNumber':SN})
                     print('''
                     1) Si
@@ -61,10 +70,16 @@ while True:
                         break
                     elif s1 in ["2"]:
                         print("OK")
+                    else:
+                        print("Dato invalido")
+                        break
 
                 elif opcion in ["3"]:
                     print("iPad 10")
                     SN = input("Numero de serie: ")
+                    if len(SN) < 4:
+                        print("Dato invalido")
+                        break
                     coleccion.insert_one({'factura':factura, 'Product':'iPad Pro 10','SerialNumber':SN})
                     print('''
                     1) Si
@@ -75,10 +90,16 @@ while True:
                         break
                     elif s1 in ["2"]:
                         print("OK")
+                    else:
+                        print("Dato invalido")
+                        break
 
                 elif opcion in ["4"]:
                     print("iPad sin especificar")
                     SN = input("Numero de serie: ")
+                    if len(SN) < 4:
+                        print("Dato invalido")
+                        break
                     coleccion.insert_one({'factura':factura, 'Product':'iPad Pro','SerialNumber':SN})
                     print('''
                     1) Si
@@ -89,10 +110,16 @@ while True:
                         break
                     elif s1 in ["2"]:
                         print("OK")
+                    else:
+                        print("Dato invalido")
+                        break
 
                 elif opcion in ["5"]:
                     print("Apple Pencil 2")
                     SN = input("Numero de serie: ")
+                    if len(SN) < 4:
+                        print("Dato invalido")
+                        break
                     coleccion.insert_one({'factura':factura, 'Product':'Apple Pencil Gen2','SerialNumber':SN})
                     print('''
                     1) Si
@@ -103,10 +130,16 @@ while True:
                         break
                     elif s1 in ["2"]:
                         print("OK")
+                    else:
+                        print("Dato invalido")
+                        break
 
                 elif opcion in ["6"]:
                     print("Apple Pencil 1")
                     SN = input("Numero de serie: ")
+                    if len(SN) < 4:
+                        print("Dato invalido")
+                        break
                     coleccion.insert_one({'factura':factura, 'Product':'Apple Pencil Gen1','SerialNumber':SN})
                     print('''
                     1) Si
@@ -117,13 +150,19 @@ while True:
                         break
                     elif s1 in ["2"]:
                         print("OK")
+                    else:
+                        print("Dato invalido")
+                        break
 
                 elif opcion in ["7"]:
                     break
 
                 else:
                     print("Comando desconocido")
+                    break
             if opcion in ["7"]:
                 break
     elif oper in ["2"]:
         break
+    else:
+        print("Dato Invalido")
